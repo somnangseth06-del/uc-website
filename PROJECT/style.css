@@ -1,0 +1,390 @@
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  overflow-x: hidden;
+}
+
+.blue {
+  color: #161c90;
+  font-weight: bold;
+}
+
+.red {
+  color: #ff0015;
+  font-weight: bold;
+}
+
+div p {
+  padding: 5px;
+}
+
+.image-container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+
+.image-box {
+  border-radius: 10px;
+  border: 2px solid #161c90;
+  width: 24%;             
+  text-align: center; 
+  background-color: #f8f8f8; 
+  margin: 0;            
+}
+
+.image-box img {
+  width: 100%;
+  aspect-ratio: 4 / 3;    
+  object-fit: cover;
+  display: block;
+}
+
+.caption {
+  font-size: 22px;
+}
+
+.center {
+  text-align: center;
+  padding: 15px;
+  font-size: 35px;
+  font-weight: bold;
+
+}
+.scroll-text {
+  background: #2f3990;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.ptb-20 {
+  padding: 20px 0 20px 0;
+}
+
+ol.custom-list {
+  list-style: none;
+  counter-reset: my-counter;
+
+}
+
+ol.custom-list li {
+  counter-increment: my-counter;
+  margin: 5px 0;
+  position: relative;
+  padding-left: 30px;
+}
+
+ol.custom-list li::before {
+  content: counter(my-counter) " - ";
+  position: absolute;
+  left: 0;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: space-between;
+}
+
+.image-row img {
+  width: 100%;
+  max-width: 49.5%; 
+  height: auto;
+}
+
+
+
+.topnav {
+    background-color: #161c90;
+    position: relative;
+    z-index: 100;
+    
+  }
+
+  .topnav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: block;
+  }
+
+  .topnav a:hover {
+    background-color: #2bb263;
+    color: white;
+  }
+  
+  .topnav a.active {
+    background-color: #2bb263;
+    color: white;
+  }
+  .drop-toggle.active {
+    background-color: #2bb263;
+    color: white;
+  }
+  
+
+  .topnav .menu {
+    display: flex;
+  }
+
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .burger {
+    display: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 20px;
+    color: white;
+    background-color: #161c90;
+    border: none;
+  }
+
+  
+  .dropdown {
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .dropdown > input[type="checkbox"] {
+    position: absolute;
+    left: -100vw;
+  }
+  
+  .dropdown > label,
+  .dropdown > a[role="button"] {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    /* -moz-border-radius: 3px;
+    border-radius: 3px; */
+  }
+  
+  .dropdown > label:hover,
+  .dropdown > a[role="button"]:hover,
+  .dropdown > a[role="button"]:focus {
+    border-color: #ffffff;
+  }
+  
+  .dropdown > label:after,
+  .dropdown > a[role="button"]:after {
+    content: none;
+  }
+  
+  .dropdown > ul {
+    position: absolute;
+    z-index: 999;
+    background: #ffffff;
+    margin: 0;
+    list-style: none;
+    width: auto;
+    white-space: nowrap;
+  }
+  
+  .dropdown > ul a {
+    display: block;
+    padding: 6px 15px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .dropdown > ul a:hover,
+  .dropdown > ul a:focus {
+    background: #ececec;
+  }
+  
+  .dropdown > input[type="checkbox"]:checked ~ ul,
+  .dropdown > ul:target {
+    left: 0;
+  }
+  
+  .dropdown > [type="checkbox"]:checked + label:after,
+  .dropdown > ul:target ~ a:after {
+    content: none;
+  }
+  
+  .dropdown a.close {
+    display: none;
+  }
+  
+  .dropdown > ul:target ~ a.close {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    text-indent: -100vw;
+    z-index: 1000;
+  }
+  
+.dropdown + h2 {
+  margin-top: 60px;
+}
+
+.drop-toggle {
+    color: white;
+    background-color: #161c90;
+    padding: 14px 16px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .drop-toggle:hover {
+    background-color: #2bb263;
+    color: white;
+  }
+  
+  .dropdown > input[type="checkbox"] {
+    display: none;
+  }
+  
+  .dropdown > input[type="checkbox"]:checked ~ .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #161c90;
+    min-width: 160px;
+    z-index: 999;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .dropdown-content li a {
+    color: rgb(0, 0, 0);
+    padding: 14px 16px;
+    display: block;
+    text-decoration: none;
+  }
+  
+  .dropdown-content li a:hover {
+    background-color: #2bb263;
+  }
+  
+  footer {
+    background-color: #161c90;
+    color: white;
+    text-align: center; 
+    margin: 10px 0 0 0;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-content img {
+    width: 40px;
+    height: auto;
+  }
+
+  .footer-content span {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 1270px) {
+    .topnav .menu > * {
+      flex: 1 1 0;
+      min-width: 0;
+      text-align: center;
+      white-space: normal;     
+      word-break: break-word;
+      display: flex;           
+      align-items: center;     
+      justify-content: center; 
+    }
+    .topnav a {
+      font-size: 13px;
+    }
+    .dropdown > label, .dropdown > a[role="button"] {
+      font-size: 13px;
+    }
+    .dropdown-content li a {
+      font-size: 13px;
+    }
+    .dropdown > input[type="checkbox"]:checked ~ ul, .dropdown > ul:target {
+      right: 0;
+      left: unset;
+  }
+  .dropdown > input[type="checkbox"]:checked ~ .dropdown-content {
+    top: 100%;
+}
+
+
+  .topnav a,
+  .dropdown > label,
+  .dropdown-content li a {
+    font-size: 12px; 
+    padding: 10px 8px; 
+    
+  }
+  .center {
+    font-size: 24px;
+  }
+  div p {
+    padding: 5px;
+    font-size: 18px;
+}
+.image-box {
+  width: 48%;
+}
+  
+  }
+  @media screen and (max-width: 520px) {
+    .topnav a {
+      font-size: 8px;
+    }
+    .dropdown > label, .dropdown > a[role="button"] {
+      font-size: 8px;
+    }
+    .dropdown-content li a {
+      font-size: 8px;
+    }
+    .dropdown > input[type="checkbox"]:checked ~ ul, .dropdown > ul:target {
+      right: 0;
+      left: unset;
+  }
+  .dropdown > input[type="checkbox"]:checked ~ ul, .dropdown > ul:target {
+    right: 0;
+    left: unset;
+}
+.image-box {
+  border-radius: 10px;
+  border: 2px solid #161c90;
+  width: 100%;
+  text-align: center;
+  background-color: #f8f8f8;
+  margin: 0;
+}
+.image-row img {
+  max-width: 100%;
+}
+  }
+    
+
+  
+    
